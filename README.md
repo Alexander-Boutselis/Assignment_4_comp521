@@ -182,7 +182,7 @@ On a Linux-like environment or WSL/macOS terminal:
 
 ```bash
 # Compile (note: -pthread is important)
-gcc -pthread asmt4_skeleton_f25.c -o sleeping_ta
+gcc -pthread TA_Sim.c -o TA_Sim
 
 # Run
 ./sleeping_ta
