@@ -165,8 +165,6 @@ void* ta_thread(void* param) {
 *               visiting the TA for help a fixed number of times.
 * Inputs: num -> pointer to an int representing this student's ID
 * Outputs: NULL when the student is done and the thread exits
-* Why we need this: Each instance of this function models a single student
-*                   in the sleeping TA problem.
 *************************************/
 void* student_thread(void* num) {
     //typcast param to integer id
@@ -175,7 +173,7 @@ void* student_thread(void* num) {
 
     for (i = 0; i < HELP_REQUESTS_PER_STUDENT; i++) {
         //Simulate time spent programming
-        int program_time = (rand() % 10) + 1; //between 1 and 3 seconds
+        int program_time = (rand() % 5) + 1; //between 1 and 5 seconds
         printf("Student %d: Programming for %d seconds.\n", id, program_time);
         sleep(program_time);
 
